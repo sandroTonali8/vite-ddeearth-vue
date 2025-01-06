@@ -1,10 +1,13 @@
 <script setup lang="ts">
 // import HelloWorld from './components/HelloWorld.vue'
 import EarthInit from './components/EarthInit.vue'
+import StatsPanel from './components/StatsPanel.vue'
 </script>
 
 <template>
   <EarthInit>
+    <StatsPanel>
+    </StatsPanel>
   </EarthInit>
 </template>
 

@@ -9,7 +9,7 @@ defineOptions({
   },
   methods: {
     mountEarth() {
-      this.earth = new Earth('container', {
+      const earth = new Earth('container', {
         baseLayer: ImageryLayer.fromProviderAsync(ArcGisMapServerImageryProvider.fromUrl('https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer', {
           enablePickFeatures: false
         }), {}),
@@ -25,6 +25,7 @@ defineOptions({
 </script>
 <template>
   <div id="container">
+    <slot></slot>
   </div>
 </template>
 <style scoped>
