@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Earth } from 'dde-earth'
 import { ArcGisMapServerImageryProvider, ImageryLayer } from 'cesium'
+import { NavigatorPlugin } from '../utils/plugin-navigator';
 
 defineOptions({
   name: 'EarthInit',
@@ -14,6 +15,7 @@ defineOptions({
           enablePickFeatures: false
         }), {}),
       })
+      earth.usePlugin(new NavigatorPlugin())
     }
   },
   destroyed() {
